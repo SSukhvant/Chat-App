@@ -12,11 +12,11 @@
         background: white;
         cursor: pointer;
         border: 1px solid rgba(0,0,0, 0.02);
-        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 16px;
         transition: all 0.5s ease-out;
 
         &:hover {
-            transform: scale(1.1) ;
+            transform: scale(1.02) ;
         }
     }
 }

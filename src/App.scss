@@ -94,11 +94,13 @@ p {
   }
 }
 
-.chat {
+
+.msgs {
   padding: 0 1rem;
   margin-bottom: 80px;
   display: flex;
   flex-direction: column;
+  z-index: 1;
   background-image: url('./image/whatsapp.png');
   background-attachment: fixed;
 }
