@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  border: 1px solid rgba(0,0,0, 0.5);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
@@ -114,14 +115,15 @@ form {
 }
 
 
-.chat__section{
-  margin-bottom: 6rem;
-  width: 40%;
-  background-image: url('./image/whatsapp.png');
-  background-attachment: fixed;
-  background-size: 800px;
-
   .msgs {
+    width: 40%;
+    min-height: 780px;
+    background-image: url('./image/whatsapp.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
     padding: 0 1rem;
     display: flex;
     flex-direction: column;
@@ -166,7 +168,6 @@ form {
       float: left;
     }
   }
-}
 
 
 @media (max-width: 914px) {
@@ -192,7 +193,7 @@ form {
     width: 70%;
   }
 
-  .chat__section{
+  .msgs{
     width: 70%;
   }
 
@@ -223,7 +224,7 @@ form {
     width: 80%;
   }
 
-  .chat__section{
+  .msgs{
     width: 80%;
   }
 
@@ -253,7 +254,7 @@ form {
     width: 100%;
   }
 
-  .chat__section{
+  .msgs{
     width: 100%;
   }
 }

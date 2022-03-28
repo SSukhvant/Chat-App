@@ -14,7 +14,6 @@ function Chat() {
     return (
         <div className='app__chat'>
             <SignOut />
-            <div className='chat__section'>
             <div className="msgs">
                 {messages.map(({ id, text, photoURL, uid }) => (
                     <div>
@@ -25,10 +24,9 @@ function Chat() {
                     </div>
                 ))}
             </div>
-            </div>
             <Send scroll={scroll} />
             <div ref={scroll}></div>
-        </div>
+            </div>
     )
 }
 
