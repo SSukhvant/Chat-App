@@ -1,0 +1,147 @@
+
+.app__chat {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    // max-width: 500px;
+    margin: 0 2rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  }
+  
+  .msgs {
+    // min-height: 920px;
+    padding: 0 1rem;
+    // margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    background-image: url('./image/whatsapp.png');
+    background-attachment: fixed;
+  }
+  
+  img {
+    border-radius: 50%;
+    height: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  p {
+    font-weight: 400;
+    font-size: 20px;
+    // margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+    overflow-wrap: break-word;
+  }
+  
+  .msg {
+    display: flex;
+    padding: 10px 16px;
+    margin: 20px;
+    border-radius: 3000px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    align-items: center;
+  }
+  
+  .sent {
+    background: var(--primary-color);
+    color: var(--text-color-2);
+    border-top-right-radius: 10%;
+    flex-direction: row-reverse;
+    padding: 10px 16px;
+    text-align: end;
+    float: right;
+  }
+  
+  .received {
+    background: var(--background-color);
+    color: var(--text-color);
+    border-top-left-radius: 10%;
+    float: left;
+  }
+  
+  .sendMsg {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    bottom: 0;
+    z-index: 1;
+    padding: 20px;
+    background-color: var(--background-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+  
+    input {
+      width: 100%;
+      padding: 10px 16px;
+      border-radius: 20px;
+      background: #2a3942;
+      color: var(--text-color);
+      caret-color: var(--text-color);
+      border: 0.1px solid rgba(117, 132, 142, 0.09);
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  
+  
+      &::placeholder{
+        color: var(--icon-color);
+    }
+  
+    &:focus {
+      outline: none;
+    }
+  
+    }
+  
+    button {
+      margin-left: 16px;
+      padding: 8px 16px;
+      border-radius: 20px;
+      background: transparent;
+      color: var(--icon-color);
+      font-size: 25px;
+      border: none;
+      transition: all 0.3s;
+      cursor: pointer;
+  
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+  }
+  
+  
+  
+  @media (max-width: 775px) {
+    p {
+      font-size: 20px;
+    }
+    .sent {
+      padding: 10px 16px;
+    }
+    .received {
+      padding: 10px 16px;
+    }
+    img {
+      height: 30px;
+      margin-top: 1px;
+    }
+  
+  }
+  
+  @media (max-width: 500px) {
+  
+    p {
+      font-size: 15px;
+    }
+    .sent {
+      padding: 10px 16px;
+    }
+    .received {
+      padding: 10px 16px;
+    }
+    img {
+      height: 27px;
+      margin-top: 1px;
+    }
+  }
+  
+  

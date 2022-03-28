@@ -23,7 +23,7 @@ function Send({ scroll }) {
         <div>
             <form onSubmit={sendMessage}>
                 <div className="sendMsg">
-                    <input placeholder='Type a message' type="text" value={msg} onChange={e => setMsg(e.target.value)} />
+                    <input placeholder='Type a message' type="text" value={msg} onChange={e => setMsg(e.target.value)} required />
                     <button type="submit"><IoMdSend/></button>
                 </div>
             </form>

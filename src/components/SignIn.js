@@ -2,7 +2,6 @@ import React from 'react'
 import firebase from 'firebase/compat/app'
 import { auth } from '../firebase.js';
 import { FcGoogle } from 'react-icons/fc';
-import './Style.scss';
 
 function SignIn() {
     function signInWithGoogle() {

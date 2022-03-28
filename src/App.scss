@@ -1,60 +1,80 @@
 
 .app__chat {
-  width: 500px;
-  margin: 0 auto;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
-}
-
-img {
-  border-radius: 50%;
-  height: 25px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-p {
-  font-weight: 400;
-  font-size: 20px;
-  // margin-top: 10px;
-  margin-left: 12px;
-  margin-right: 12px;
-  overflow-wrap: break-word;
-}
-
-.msg {
   display: flex;
-  padding: 10px 16px;
-  margin: 20px;
-  border-radius: 3000px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
 
-.sent {
-  background: var(--primary-color);
-  color: var(--text-color-2);
-  border-top-right-radius: 10%;
-  flex-direction: row-reverse;
-  padding: 10px 16px;
-  text-align: end;
-  float: right;
+.app__signin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  button {
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 10px;
+      font-weight: 400;
+      background: white;
+      cursor: pointer;
+      border: 1px solid rgba(0,0,0, 0.02);
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 8px 16px;
+      transition: all 0.5s ease-out;
+
+      &:hover {
+          transform: scale(1.02) ;
+      }
+  }
 }
 
-.received {
-  background: var(--background-color);
-  color: var(--text-color);
-  border-top-left-radius: 10%;
-  float: left;
+.app__signout {
+  position: fixed;
+  top: 0;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 2rem;
+  background-color: var(--background-color);
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 4px;
+  z-index: 2;
+
+  h2 {
+      color: var(--text-color);
+  }
+
+  button {
+      font-size: 16px;
+      border-radius: 10px;
+      background: transparent;
+      color: rgb(255,0,56);
+      cursor: pointer;
+      border: none;
+  }
+}
+
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
 }
 
 .sendMsg {
   position: fixed;
-  display: flex;
-  width: 500px;
   bottom: 0;
-  z-index: 1;
-  padding: 20px;
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.8rem 1rem;
   background-color: var(--background-color);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
+  z-index: 2;
 
   input {
     width: 100%;
@@ -79,7 +99,6 @@ p {
 
   button {
     margin-left: 16px;
-    padding: 8px 16px;
     border-radius: 20px;
     background: transparent;
     color: var(--icon-color);
@@ -95,15 +114,90 @@ p {
 }
 
 
-.msgs {
-  padding: 0 1rem;
-  margin-bottom: 80px;
-  display: flex;
-  flex-direction: column;
-  z-index: 1;
+.chat__section{
+  margin-bottom: 6rem;
+  width: 40%;
   background-image: url('./image/whatsapp.png');
   background-attachment: fixed;
+  background-size: 800px;
+
+  .msgs {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      border-radius: 50%;
+      height: 25px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    
+    p {
+      font-weight: 400;
+      font-size: 20px;
+      margin-left: 12px;
+      margin-right: 12px;
+      overflow-wrap: break-word;
+    }
+    
+    .msg {
+      display: flex;
+      padding: 10px 16px;
+      margin: 20px;
+      border-radius: 3000px;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+      align-items: center;
+    }
+    
+    .sent {
+      background: var(--primary-color);
+      color: var(--text-color-2);
+      border-top-right-radius: 10%;
+      flex-direction: row-reverse;
+      padding: 10px 16px;
+      text-align: end;
+      float: right;
+    }
+    
+    .received {
+      background: var(--background-color);
+      color: var(--text-color);
+      border-top-left-radius: 10%;
+      float: left;
+    }
+  }
 }
+
+
+@media (max-width: 914px) {
+  p {
+    font-size: 20px;
+  }
+  .sent {
+    padding: 10px 16px;
+  }
+  .received {
+    padding: 10px 16px;
+  }
+  img {
+    height: 30px;
+    margin-top: 1px;
+  }
+
+  .app__signout{
+    width: 70%;
+  }
+
+  .sendMsg{
+    width: 70%;
+  }
+
+  .msgs{
+    width: 70%;
+  }
+
+}
+
 
 
 @media (max-width: 775px) {
@@ -119,6 +213,18 @@ p {
   img {
     height: 30px;
     margin-top: 1px;
+  }
+
+  .app__signout{
+    width: 80%;
+  }
+
+  .sendMsg{
+    width: 80%;
+  }
+
+  .msgs{
+    width: 80%;
   }
 
 }
@@ -137,6 +243,18 @@ p {
   img {
     height: 27px;
     margin-top: 1px;
+  }
+
+  .app__signout{
+    width: 100%;
+  }
+
+  .sendMsg{
+    width: 100%;
+  }
+
+  .msgs{
+    width: 100%;
   }
 }
 
