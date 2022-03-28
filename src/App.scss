@@ -158,7 +158,10 @@ form {
       padding: 10px 16px;
       margin: 20px;
       border-radius: 3000px;
-      box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+      // box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+      border: 0.1px solid rgba(117, 132, 142, 0.09);
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px, rgba(0, 0, 0, 0.23) 0px 2px 4px;
       align-items: center;
     }
     
